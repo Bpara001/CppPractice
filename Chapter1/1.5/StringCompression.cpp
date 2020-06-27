@@ -18,15 +18,7 @@ string Compression(string s){
         }
 
     }
-    if(s.at(s.size()-2) ==s.at(s.size()-1)){
-        temp=to_string(counter);
-        counter=1;
-        str+=s.at(s.size()-2)+temp ;
-    }
-    else{
-        temp=to_string(1);
-        str+=s.at(s.size()-1)+temp ;
-    }
+    str+=s.at(s.size()-1) +to_string(counter);
     if(str.size() > s.size())
     {
         return s;
