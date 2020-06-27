@@ -1,0 +1,2 @@
+Reviewing Programming Fundamentals. Using Cracking the Coding Interview 6th edition. Reading the Chapters first and then practicing their problems.
+Attempting to get good run times from these problems and good coding practices. For others to be able to read my code and thought process.
