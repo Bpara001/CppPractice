@@ -36,8 +36,11 @@ void RemoveDuplicate(Node *head)
     Node *prev=head;
     Node *curr=head->next;
     unordered_map<int,int>node_hash;
-    node_hash[head->data]=1;
-
+    //adding to unordered map
+    //Method 1
+    //node_hash[head->data]=1;
+    //Method 2
+    node_hash.insert(make_pair(head->data,1));
     while(curr!= nullptr){
         while(curr && node_hash.find(curr->data) != node_hash.end() ){
             curr = curr->next;
