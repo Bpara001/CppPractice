@@ -61,7 +61,7 @@ int main(){
     int size=rand()%20 +2;
 
     for(unsigned i =0; i<size;i++){
-        insert(head,rand()%3+1);
+        insert(head,rand()%5+1);
     }
     cout<<"Printing Original"<<endl;
     print(head);
