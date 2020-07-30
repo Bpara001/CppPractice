@@ -11,6 +11,9 @@ double Total_Bill(double W, double E,double G)
 {
     double Total=0;
     Total =  (W/WPeople)  + ( (E*EPercent) /2) +  ( (G*GPercent) /2);
+    cout<<"Water Total: "<<trunc((W/WPeople))<<endl;
+    cout<<"Electricity Total: "<<trunc(((E*EPercent)/2))<<endl;
+    cout<<"Gas Total: "<<trunc(((G*GPercent) /2))<<endl;
     return Total;
 
 }//Formula For Calculating
@@ -20,7 +23,7 @@ int main(){
     double Water=0;
     double Electricity=0;
     double Gas=0;
-
+    double amount=0;
     //Introduction to Program(User Input)
     cout<<"Bills Calculator"<<endl;
     cout<<"Please Enter Water Bill Total: "<<endl;
@@ -31,8 +34,10 @@ int main(){
     cin>>Gas;
 
     //Function Called for Displayed
-    cout<<"Total Amount: "<<Total_Bill(Water,Electricity,Gas)<<endl;
-    cout<<"Truncated Total Amount: "<<trunc(Total_Bill(Water,Electricity,Gas))<<endl;
+    amount=Total_Bill(Water,Electricity,Gas);
+    cout<<"Total Amount: "<<amount<<endl;
+    amount=trunc(amount);
+    cout<<"Truncated Total Amount: "<<amount<<endl;
 
     return 0 ;
 }//End of Program
