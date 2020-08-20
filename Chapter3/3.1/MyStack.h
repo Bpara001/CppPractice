@@ -9,7 +9,7 @@
 //
 #include <iostream>
 #include <cstdlib>
-template <class T>
+template <typename T>
 class MyStack {
 
 private:

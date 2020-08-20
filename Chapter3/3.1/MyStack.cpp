@@ -6,19 +6,19 @@
 using namespace std;
 
 
-template <class T>
+template <typename T>
 MyStack<T>::MyStack(int stackCapacity) {
 
     this->stackCapacity= stackCapacity;
     stackArray=new T[numOfStack * stackCapacity](); //initialize array values to 0
     stackCapacityUsed= new T[numOfStack]();
 }
-template <class T>
+template <typename T>
 MyStack<T>::~MyStack() {
     delete [] stackArray;
     delete [] stackCapacityUsed;
 }
-template<class T>
+template<typename T>
 void MyStack<T>::push(int stackNum, T value) {
     if(isFull(stackNum)){
         cout<<"Stack "<<stackNum<<" is full.Please pick a different one.\n ";
@@ -31,16 +31,16 @@ void MyStack<T>::push(int stackNum, T value) {
     }
 
 }
-template <class T>
+template <typename T>
 bool MyStack<T>::isEmpty(int Stacknum) const {
     return (stackCapacityUsed[Stacknum]==0);
 }
-template <class T>
+template <typename T>
 bool MyStack<T>::isFull(int stackNum)const {
     return (stackCapacityUsed[stackNum]==stackCapacity);
 }
 
-template <class T>
+template <typename T>
 void MyStack<T>::pop(int stackNum){
     if(isEmpty(stackNum)){
         cout<<"Stack Number "<<stackNum<<" is Empty";
@@ -54,7 +54,7 @@ void MyStack<T>::pop(int stackNum){
     }
 }
 
-template <class T>
+template <typename T>
 T MyStack<T>::peek(int stackNum) {
     if(isEmpty(stackNum)){
         cout<<"Empty Stack:" <<stackNum;
@@ -65,7 +65,7 @@ T MyStack<T>::peek(int stackNum) {
     }
 }
 
-template <class T>
+template <typename  T>
 int MyStack<T>::indexOfTop(int stackNum) const {
     int start=(stackNum * stackCapacity);
     int cap= stackCapacityUsed[stackNum];
