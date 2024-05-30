@@ -3,4 +3,4 @@ project(CppPractice)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CppPractice ../UniqueString.cpp)
+add_executable(CppPractice ../UniqueSting/UniqueString.cpp)

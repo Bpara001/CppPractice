@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <climits>
+#include <cstring>
+
 #define Max_Chars 256
 using namespace std;
 
